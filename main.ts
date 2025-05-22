@@ -595,6 +595,7 @@ function setLevelTileMap (level: number) {
     if (level == 0) {
         animation.stopAnimation(animation.AnimationTypes.All, hero)
         effects.clearParticles(hero)
+        music.stopAllSounds()
         info.startCountdown(300)
         music.play(music.createSong(assets.song`Underground`), music.PlaybackMode.LoopingInBackground)
         scroller.scrollBackgroundWithCamera(scroller.CameraScrollMode.OnlyHorizontal, scroller.BackgroundLayer.Layer4)
@@ -4378,6 +4379,7 @@ let gravity = 0
 let pixelsToMeters = 0
 let invincibilityPeriod = 0
 let hero: Sprite = null
+music.stopAllSounds()
 hero = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . f 5 f . . . . . f f 5 f . 
