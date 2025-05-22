@@ -36,10 +36,12 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Bumper, function (sprite, otherS
         sprite.vy = -2 * pixelsToMeters
         info.changeLifeBy(-3)
         music.magicWand.play()
+        game.reset()
     } else {
         info.changeLifeBy(-3)
         sprite.say("Get Good", invincibilityPeriod)
         music.knock.play()
+        game.reset()
     }
     pause(invincibilityPeriod)
 })
@@ -509,7 +511,7 @@ function initializeCoinAnimation () {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Coin, function (sprite, otherSprite) {
     otherSprite.destroy(effects.trail, 250)
     otherSprite.y += -3
-    info.changeScoreBy(3)
+    info.changeScoreBy(1)
     music.pewPew.play()
 })
 function attemptJump () {
@@ -591,8 +593,10 @@ browserEvents.P.onEvent(browserEvents.KeyEvent.Pressed, function () {
     controller.moveSprite(hero)
 })
 function setLevelTileMap (level: number) {
+    music.stopAllSounds()
     clearGame()
     if (level == 0) {
+        music.stopAllSounds()
         animation.stopAnimation(animation.AnimationTypes.All, hero)
         effects.clearParticles(hero)
         music.stopAllSounds()
