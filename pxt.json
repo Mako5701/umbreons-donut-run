@@ -1,5 +1,6 @@
 {
     "name": "Umbreons Donut Run!",
+    "version": "1.0.0",
     "description": "",
     "dependencies": {
         "device": "*",
