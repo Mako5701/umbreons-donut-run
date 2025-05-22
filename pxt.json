@@ -1,0 +1,60 @@
+{
+    "name": "Umbreons Donut Run!",
+    "description": "",
+    "dependencies": {
+        "device": "*",
+        "animation": "*",
+        "Color Fading": "github:jwunderl/pxt-color#v0.2.3",
+        "Sprite Grid": "github:microsoft/arcade-grid#v1.3.0",
+        "color-coded-tilemap": "*",
+        "arcade-background-scroll": "github:microsoft/arcade-background-scroll#v0.1.2",
+        "arcade-tile-util": "github:microsoft/arcade-tile-util#v1.2.0",
+        "arcade-story": "github:microsoft/arcade-storytelling#v1.0.3",
+        "radio-broadcast": "*",
+        "browser-events": "*",
+        "pxt-button-combos": "github:jwunderl/pxt-button-combos#v0.0.24"
+    },
+    "files": [
+        "main.blocks",
+        "main.ts",
+        "README.md",
+        "assets.json",
+        "tilemap.g.jres",
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "targetVersions": {
+        "branch": "v2.0.56",
+        "tag": "v2.0.56",
+        "commits": "https://github.com/microsoft/pxt-arcade/commits/2e47d3464cf6ea715ec6e630834bbe15bc2f6feb",
+        "target": "2.0.56",
+        "pxt": "11.3.59",
+        "targetId": "arcade"
+    },
+    "supportedTargets": [
+        "arcade"
+    ],
+    "preferredEditor": "blocksprj",
+    "palette": [
+        "#000000",
+        "#FFFFFF",
+        "#FF0000",
+        "#FF007D",
+        "#FF7a00",
+        "#e5FF00",
+        "#2D9F00",
+        "#00FF72",
+        "#0034FF",
+        "#17ABFF",
+        "#C600FF",
+        "#636363",
+        "#7400DB",
+        "#00EFFF",
+        "#DF2929",
+        "#000000"
+    ]
+}
