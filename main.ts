@@ -302,6 +302,7 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile6`, function (sprite, location) {
     hero.startEffect(effects.ashes)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 function initializeCoinAnimation () {
     coinAnimation = animation.createAnimation(ActionKind.Walking, 200)
@@ -2013,6 +2014,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava0, function (sp
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile7`, function (sprite, location) {
     hero.startEffect(effects.ashes)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 function animateRun () {
     mainRunLeft = animation.createAnimation(ActionKind.Walking, 100)
@@ -2759,6 +2761,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava1, function (sp
     music.play(music.melodyPlayable(music.sonar), music.PlaybackMode.InBackground)
     hero.startEffect(effects.disintegrate)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 function createEnemies () {
     // enemy that moves back and forth
@@ -3690,6 +3693,7 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile8`, function (sprite, l
     music.play(music.createSong(assets.song`Bottomless Pit0`), music.PlaybackMode.LoopingInBackground)
     hero.startEffect(effects.disintegrate)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile2`, function (sprite, location) {
     music.play(music.melodyPlayable(music.magicWand), music.PlaybackMode.UntilDone)
@@ -3854,10 +3858,12 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile2`, function (sprite, l
     music.play(music.createSong(assets.song`Bottomless Pit0`), music.PlaybackMode.LoopingInBackground)
     hero.startEffect(effects.disintegrate)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile5`, function (sprite, location) {
     hero.startEffect(effects.ashes)
     game.gameOver(false)
+    music.stopAllSounds()
 })
 scene.onOverlapTile(SpriteKind.Player, assets.tile`tile29`, function (sprite, location) {
     tileUtil.replaceAllTiles(assets.tile`tile29`, assets.tile`tile31`)
