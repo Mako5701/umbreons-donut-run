@@ -261,21 +261,21 @@ scene.onOverlapTile(SpriteKind.Player, assets.tile`myTile72`, function (sprite, 
 })
 function giveIntroduction () {
     game.setDialogFrame(img`
-        . f f f f f f f f f f f f f . . 
-        f f 3 3 3 5 3 3 3 3 3 3 3 f f . 
-        f 3 d 3 3 3 3 3 3 3 7 3 5 3 f . 
-        f 3 3 3 f f f f f f f 3 3 3 f . 
-        f 3 3 f e e e e e e e f 3 3 f . 
-        f 3 5 f e e e e e e e f d 3 f . 
-        f 3 3 f e e e e e e e f 3 3 f . 
-        f 3 3 f e e e e e e e f 3 3 f . 
-        f 3 3 f e e e e e e e f 3 3 f . 
-        f 5 3 f e e e e e e e f 3 3 f . 
-        f 3 3 f e e e e e e e f 3 7 f . 
-        f 3 7 3 f f f f f f f 5 3 3 f . 
-        f 3 3 3 3 3 3 3 3 3 3 3 3 3 f . 
-        f f 3 3 3 3 5 3 3 3 3 d 3 f f . 
-        . f f f f f f f f f f f f f . . 
+        . 2 2 2 2 2 2 2 2 2 2 2 2 2 . . 
+        2 2 3 3 3 5 3 3 3 3 3 3 3 2 2 . 
+        2 3 d 3 3 3 3 3 3 3 7 3 5 3 2 . 
+        2 3 3 3 2 2 2 2 2 2 2 3 3 3 2 . 
+        2 3 3 2 e e e e e e e 2 3 3 2 . 
+        2 3 5 2 e e e e e e e 2 d 3 2 . 
+        2 3 3 2 e e e e e e e 2 3 3 2 . 
+        2 3 3 2 e e e e e e e 2 3 3 2 . 
+        2 3 3 2 e e e e e e e 2 3 3 2 . 
+        2 5 3 2 e e e e e e e 2 3 3 2 . 
+        2 3 3 2 e e e e e e e 2 3 7 2 . 
+        2 3 7 3 2 2 2 2 2 2 2 5 3 3 2 . 
+        2 3 3 3 3 3 3 3 3 3 3 3 3 3 2 . 
+        2 2 3 3 3 3 5 3 3 3 3 d 3 2 2 . 
+        . 2 2 2 2 2 2 2 2 2 2 2 2 2 . . 
         . . . . . . . . . . . . . . . . 
         `)
     game.setDialogCursor(img`
