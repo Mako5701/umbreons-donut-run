@@ -509,7 +509,7 @@ function initializeCoinAnimation () {
         `)
 }
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Coin, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.trail, 250)
+    otherSprite.destroy(effects.none, 250)
     otherSprite.y += -3
     info.changeScoreBy(1)
     music.pewPew.play()
@@ -523,7 +523,7 @@ function attemptJump () {
         // Good double jump
         if (hero.vy >= -40) {
             doubleJumpSpeed = -4.5 * pixelsToMeters
-            hero.startEffect(effects.trail, 500)
+            hero.startEffect(effects.halo, 1000)
             scene.cameraShake(2, 250)
         }
         hero.vy = doubleJumpSpeed
@@ -1245,6 +1245,7 @@ function setLevelTileMap (level: number) {
         music.play(music.createSong(assets.song`Underwater Theme`), music.PlaybackMode.LoopingInBackground)
         scroller.scrollBackgroundWithCamera(scroller.CameraScrollMode.OnlyHorizontal, scroller.BackgroundLayer.Layer4)
         info.startCountdown(300)
+        hero.startEffect(effects.bubbles)
         scene.setBackgroundImage(img`
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -1370,6 +1371,7 @@ function setLevelTileMap (level: number) {
         tiles.setTilemap(tilemap`level_4`)
         sprites.destroy(mySprite)
     } else if (level == 6) {
+        hero.startEffect(effects.none)
         info.startCountdown(300)
         music.stopAllSounds()
         music.play(music.createSong(assets.song`Restaurant Theme`), music.PlaybackMode.LoopingInBackground)
